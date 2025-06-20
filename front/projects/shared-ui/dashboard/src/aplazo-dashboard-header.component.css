@@ -1,0 +1,3 @@
+.aplazo-dash__header {
+  @apply flex-grow flex-shrink-0;
+}

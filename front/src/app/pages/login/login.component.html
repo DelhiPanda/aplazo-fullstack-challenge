@@ -1,0 +1,30 @@
+<div class="flex flex-col justify-center h-90">
+
+  <div style="margin-bottom: 2rem;">
+    <aplz-ui-logo size="lg"></aplz-ui-logo>
+  </div>
+
+  <div class="flex flex-col content-center">
+
+    <div class="text-center">
+      <h1>Inicia sesión</h1>
+    </div>
+
+    <form [formGroup]="form" class="apz-form flex flex-col" (ngSubmit)="login()">
+
+      <apz-form-input upperCase="false" formControlName="username" label="Email" type="email"
+        placeholder="my_example@email.com" class="mb-3" />
+
+      <apz-form-input upperCase="false" formControlName="password" label="Password" type="password"
+        placeholder="•••••••••" class="mb-3" />
+
+      <button class="w-100" aplzButton aplzAppearance="stroked" aplzColor="dark" size="md" [disabled]="form.invalid"
+        type="submit">
+        Continuar
+      </button>
+
+    </form>
+
+  </div>
+
+</div>

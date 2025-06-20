@@ -1,0 +1,6 @@
+<label class="apz-control">
+    <p class="apz-control-label">{{ label }}</p>
+    <input [id]="id" class="apz-input-form" [ngClass]="{ error: control.touched && !control.valid }" [type]="type"
+        [formControl]="control" [placeholder]="placeholder" (ngModelChange)="changeModel($event)">
+    <span class="msg-error" *ngIf="errMsg">{{ control.touched && control.invalid ? errMsg : ""}}</span>
+</label>

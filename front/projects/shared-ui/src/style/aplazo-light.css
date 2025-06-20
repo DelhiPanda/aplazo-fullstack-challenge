@@ -1,0 +1,312 @@
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  src: local("Manrope")
+    url("https://aplazoassets.s3.us-west-2.amazonaws.com/fonts/Manrope-Regular.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+  src: local("Manrope")
+    url("https://aplazoassets.s3.us-west-2.amazonaws.com/fonts/Manrope-Bold.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+  src: local("Manrope")
+    url("https://aplazoassets.s3.us-west-2.amazonaws.com/fonts/Manrope-Light.woff2")
+    format("woff2");
+}
+
+:root {
+  --white: #ffffff;
+  --dark-black: #000000;
+  --dark-primary: #272937;
+  --dark-primary-rgb: 39 41 45;
+  --dark-secondary: #272937bf;
+  --dark-tertiary: #27293759;
+  --dark-disabled: #2729371f;
+  --dark-background: #2729370d;
+  --light-white: #ffffff;
+  --light-primary: #ffffffed;
+  --light-primary-rgb: 255 255 255;
+  --light-secondary: #ffffffa6;
+  --light-tertiary: #ffffff59;
+  --light-disabled: #ffffff33;
+  --light-background: #ffffff1a;
+  --accent-primary: #1991ff;
+  --accent-primary-rgb: 25 145 255;
+  --accent-hover: #4caaff;
+  --accent-pressed: #0078e5;
+  --accent-opacity-0-1: #1991ff1a;
+  --accent-opacity-0-15: #1991ff26;
+  --accent-opacity-0-20: #1991ff33;
+  --special-info: #1991ff;
+  --special-success: #78e39d;
+  --special-warning: #ffc774;
+  --special-danger: #f44336;
+  --aplazo-deportes: #5fc7a4;
+  --aplazo-hogar: #6080e9;
+  --aplazo-tech: #f0d66a;
+  --aplazo-moda: #b5acf2;
+  --aplazo-food: #f0aa6a;
+  --aplazo-fav: #6ab0f0;
+  --aplazo-pres: #faf3e9;
+  --aplazo-peso: #f2ace7;
+  --aplazo-detono: #fe9797;
+  --aplazo-aplazo: #00e6f5;
+  --aplazo-bg: #e0eef0;
+  --alert-default-icon: #5c5f62;
+  --alert-default-background: #f6f6f7;
+  --alert-default-stroke: #babfc3;
+  --alert-critical-icon: #d72c0d;
+  --alert-critical-background: #fff4f4;
+  --alert-critical-stroke: #e0b3b2;
+  --alert-information-icon: #066de6;
+  --alert-information-background: #f0faff;
+  --alert-information-stroke: #0075ff;
+  --alert-warning-icon: #d6a75e;
+  --alert-warning-background: #fff5ea;
+  --alert-warning-stroke: #e1b878;
+  --alert-succes-icon: #026a50;
+  --alert-succes-background: #f1f8f5;
+  --alert-succes-stroke: #007f5f;
+  --ordenes-pagado: #9af4b9;
+  --ordenes-pendiente-de-pago: #ffdca7;
+  --ordenes-vencido: #fe9797;
+  --ordenes-cancelado: #d7d7d7;
+  --ordenes-devolucion-ejecutada: #8fdaff;
+  --accesdirect-blue-color: #29c3d3;
+
+  --font-families-manrope: "Manrope";
+  --font-families-spirit: "Spirit";
+
+  --font-size-base: 16px;
+  --font-size-xs: 8px;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 40px;
+  --font-size-4xl: 56px;
+  --font-size-5xl: 72px;
+
+  --font-size-0: 8;
+  --font-size-1: 12;
+  --font-size-2: 14;
+  --font-size-3: 16;
+  --font-size-4: 20;
+  --font-size-5: 24;
+  --font-size-6: 32;
+  --font-size-7: 40;
+  --font-size-8: 56;
+  --font-size-9: 72;
+
+  --line-height-base: 24px;
+  --line-height-xs: 12px;
+  --line-height-sm: 16px;
+  --line-height-md: 20px;
+  --line-height-lg: 28px;
+  --line-height-xl: 32px;
+  --line-height-2xl: 36px;
+  --line-height-3xl: 44px;
+  --line-height-4xl: 60px;
+  --line-height-5xl: 72px;
+
+  --letter-spacing-base: -0.6px;
+  --letter-spacing-xs: 0.3px;
+  --letter-spacing-sm: 0.3px;
+  --letter-spacing-md: -0.1px;
+  --letter-spacing-lg: -0.8px;
+  --letter-spacing-xl: -1px;
+  --letter-spacing-2xl: -1px;
+  --letter-spacing-3xl: -1.5px;
+  --letter-spacing-4xl: -2px;
+  --letter-spacing-5xl: -3px;
+}
+
+@layer components {
+  .aplazo-element-appearance--basic {
+    @apply bg-transparent;
+  }
+  .aplazo-element-color--light:not(.disabled) {
+    @apply text-dark bg-transparent active:text-dark-black;
+  }
+  .aplazo-element-color--dark:not(.disabled) {
+    @apply text-light bg-dark active:text-light-white;
+  }
+  .aplazo-element-color--accent:not(.disabled) {
+    @apply text-accent bg-transparent active:text-accent-pressed;
+  }
+  .aplazo-element-color--aplazo:not(.disabled) {
+    @apply text-aplazo-aplazo bg-transparent;
+  }
+  .aplazo-element-color--info:not(.disabled) {
+    @apply text-special-info bg-transparent;
+  }
+  .aplazo-element-color--success:not(.disabled) {
+    @apply text-special-success bg-transparent;
+  }
+  .aplazo-element-color--warning:not(.disabled) {
+    @apply text-special-warning bg-transparent;
+  }
+  .aplazo-element-color--danger:not(.disabled) {
+    @apply text-special-danger bg-transparent;
+  }
+  .aplazo-element-appearance--basic:is(.aplazo-element-color--light):not(
+      .disabled
+    ) {
+    @apply text-dark active:text-dark-black;
+  }
+  .aplazo-element-appearance--basic:is(.aplazo-element-color--dark):not(
+      .disabled
+    ) {
+    @apply text-light active:text-light-white;
+  }
+  .aplazo-element-appearance--basic:is(.aplazo-element-color--accent):not(
+      .disabled
+    ),
+  .aplazo-element-appearance--basic:is(.aplazo-element-color--info):not(
+      .disabled
+    ) {
+    @apply text-accent active:text-accent-pressed;
+  }
+  .aplazo-element-appearance--basic:is(.aplazo-element-color--aplazo):not(
+      .disabled
+    ) {
+    @apply text-aplazo-aplazo;
+  }
+  .aplazo-element-appearance--basic:is(.aplazo-element-color--success):not(
+      .disabled
+    ) {
+    @apply text-special-success;
+  }
+  .aplazo-element-appearance--basic:is(.aplazo-element-color--warning):not(
+      .disabled
+    ) {
+    @apply text-special-warning;
+  }
+  .aplazo-element-appearance--basic:is(.aplazo-element-color--danger):not(
+      .disabled
+    ) {
+    @apply text-special-danger;
+  }
+  .aplazo-element-appearance--basic:is(.disabled) {
+    @apply text-dark-tertiary;
+  }
+  .aplazo-element-appearance--stroked {
+    @apply bg-light border border-[currentColor];
+  }
+  .aplazo-element-appearance--stroked:is(.aplazo-element-color--light):not(
+      .disabled
+    ) {
+    @apply text-dark active:bg-dark active:text-light;
+  }
+  .aplazo-element-appearance--stroked:is(.aplazo-element-color--dark):not(
+      .disabled
+    ) {
+    @apply bg-dark text-light active:bg-light active:text-dark;
+  }
+  .aplazo-element-appearance--stroked:is(.aplazo-element-color--accent):not(
+      .disabled
+    ),
+  .aplazo-element-appearance--stroked:is(.aplazo-element-color--info):not(
+      .disabled
+    ) {
+    @apply text-accent active:bg-accent-pressed active:text-light;
+  }
+  .aplazo-element-appearance--stroked:is(.aplazo-element-color--aplazo):not(
+      .disabled
+    ) {
+    @apply text-aplazo-aplazo active:bg-aplazo-aplazo active:text-light;
+  }
+  .aplazo-element-appearance--stroked:is(.aplazo-element-color--success):not(
+      .disabled
+    ) {
+    @apply text-special-success active:bg-special-success active:text-light;
+  }
+  .aplazo-element-appearance--stroked:is(.aplazo-element-color--warning):not(
+      .disabled
+    ) {
+    @apply text-special-warning active:bg-special-warning active:text-light;
+  }
+  .aplazo-element-appearance--stroked:is(.aplazo-element-color--danger):not(
+      .disabled
+    ) {
+    @apply text-special-danger active:bg-special-danger active:text-light;
+  }
+  .aplazo-element-appearance--stroked:is(.disabled) {
+    @apply bg-light border-dark-tertiary text-dark-tertiary;
+  }
+  .aplazo-element-appearance--solid:is(.aplazo-element-color--light):not(
+      .disabled
+    ) {
+    @apply bg-light text-dark-secondary active:bg-light-white active:text-dark-black;
+  }
+  .aplazo-element-appearance--solid:is(.aplazo-element-color--dark):not(
+      .disabled
+    ) {
+    @apply bg-dark text-light active:bg-dark-black;
+  }
+  .aplazo-element-appearance--solid:is(.aplazo-element-color--accent):not(
+      .disabled
+    ),
+  .aplazo-element-appearance--solid:is(.aplazo-element-color--info):not(
+      .disabled
+    ) {
+    @apply bg-accent text-light active:bg-accent-pressed;
+  }
+  .aplazo-element-appearance--solid:is(.aplazo-element-color--aplazo):not(
+      .disabled
+    ) {
+    @apply bg-aplazo-aplazo text-light;
+  }
+  .aplazo-element-appearance--solid:is(.aplazo-element-color--success):not(
+      .disabled
+    ) {
+    @apply bg-special-success text-light;
+  }
+  .aplazo-element-appearance--solid:is(.aplazo-element-color--warning):not(
+      .disabled
+    ) {
+    @apply bg-special-warning text-light;
+  }
+  .aplazo-element-appearance--solid:is(.aplazo-element-color--danger):not(
+      .disabled
+    ) {
+    @apply bg-special-danger text-light;
+  }
+  .aplazo-element-appearance--solid:is(.disabled) {
+    @apply bg-dark-tertiary text-light;
+  }
+  .aplazo-element-size--xs {
+    @apply text-xs p-1;
+  }
+  .aplazo-element-size--sm {
+    @apply text-sm px-3 py-1.5;
+  }
+  .aplazo-element-size--md {
+    @apply text-md px-5 py-3;
+  }
+  .aplazo-element-size--lg {
+    @apply text-lg px-7 py-3.5;
+  }
+  .aplazo-element-size--xl {
+    @apply text-xl px-7 py-3.5;
+  }
+  .aplazo-element-size--2xl {
+    @apply text-2xl px-8 py-4;
+  }
+}

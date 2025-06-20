@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --apz-color-primary: #7FEDFA;
+    --apz-color: #4c878f;
+    --apz-color-hover: #3a6f7b;
+    --apz-color-active: #2f5f6a;
+    --apz-color-disabled: #f5f5f5;
+    --apz-color-error: #e74c3c;
+    --apz-color-success: #2ecc71;
+    --apz-color-warning: #f1c40f;
+    --apz-color-info: #3498db;
+    --apz-color-light: #ecf0f1;
+}
+
+* {
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: #000000;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #8b8b8b;
+    margin-bottom: 1rem;
+}
+
+.cl-primary {
+    color: var(--apz-color-primary);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.content-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.content-between {
+    justify-content: space-between;
+}
+
+.content-around {
+    justify-content: space-around;
+}
+
+.h-90 {
+    height: 90%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.apz-control-label {
+    color: #999999;
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 21px;
+    /* Label sobre input */
+    margin-bottom: -0.7rem;
+    position: relative;
+    z-index: 3;
+    background: white;
+    width: max-content;
+    margin-left: 0.4rem;
+    padding: 0 0.2rem;
+}
+
+.apz-control {
+    width: 100%;
+}
+
+.apz-control .msg-error {
+    display: block;
+    margin-left: 0.5rem;
+    color: #7D95A0;
+    font-size: 0.7rem;
+}
+
+.apz-control .apz-input-form {
+    color: #869BA6;
+    background: #fff;
+    border: 1px solid #acacac;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    line-height: 21px;
+    padding: 10px;
+    width: 100%;
+    transition: border 0.3s;
+}
+
+.apz-control .apz-input-form:focus {
+    border: 1px solid #969696;
+}
+
+.apz-control .apz-input-form.error {
+    border: 1px solid rgba(255, 0, 0, 0.61);
+}
+
+.apz-control .apz-input-form:disabled {
+    background: #f3f3f3;
+}
+
+.apz-control .apz-input-form::placeholder {
+    color: #cfcfcf;
+    font-size: 14px;
+}
+
+.apz-control.form-password {
+    position: relative;
+}
+
+.apz-control.form-password img,
+.apz-control.form-password i {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    background: transparent;
+    padding: 0 10px;
+}
+
+.apz-control.form-password input[type="password"] {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.apz-control.form-password input::placeholder {
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.form-control {
+    padding: 0 2%;
+    border-color: oklab-color;
+    font-size: 16px;
+    transition: all 0.35s;
+    height: 40px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.1rem rgba(131, 229, 241, 0.25);
+    border: 1px solid #4c878f;
+}
+
+select {
+    appearance: auto !important;
+}
+
+.error-txt {
+    color: #4c878f;
+    position: relative;
+}
+
+.error-txt span {
+    position: absolute;
+    right: 13px;
+}
+
+.input-error {
+    border: 1px solid oklab-error;
+}
+
+.aplazo-base-button {
+    border-radius: 50px !important;
+}
+
+.aplazo-base-button:disabled {
+    background-color: var(--apz-color-disabled);
+    color: #cecece;
+    border: 1px solid #cecece;
+    cursor: not-allowed;
+}
+
+input[type='range'] {
+    accent-color: var(--apz-color-primary);
+}

@@ -1,0 +1,37 @@
+<div class="text-center">
+    <h1>Préstamo</h1>
+
+    <p>Solicita tu préstamo de manera fácil y rápida.</p>
+</div>
+
+<div class="flex content-center">
+
+    <form [formGroup]="loanForm" class="apz-form flex flex-col content-center" (ngSubmit)="newLoan()">
+
+        <p>Monto del préstamo <strong>{{ amount | currency:'$ ' }}</strong></p>
+
+        <input formControlName="amount" type="range" min="1000" [max]="availableCreditLineAmount" step="1000"
+            class="w-100 mb-3">
+
+        <button aplzButton aplzAppearance="stroked" aplzColor="dark" size="md" type="submit">
+            Solicitar Préstamo
+        </button>
+
+        @if (paymentPlan) {
+        <p>Plan de pagos</p>
+        <table id="customers">
+            <tr>
+                <th>Fecha de pago</th>
+                <th>Monto</th>
+            </tr>
+            @for (item of paymentPlan.installments; track $index) {
+            <tr>
+                <td>{{ item.scheduledPaymentDate }}</td>
+                <td>{{ item.amount | currency: '$ ' }}</td>
+            </tr>
+            }
+        </table>
+        }
+
+    </form>
+</div>

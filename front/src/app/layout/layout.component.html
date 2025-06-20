@@ -1,0 +1,21 @@
+<aplz-ui-dashboard (logoClick)="clickLogo()">
+  <aplz-ui-dash-header>
+    <nav class="flex flex-grow flex-shrink-0 justify-between items-center w-full">
+      <h2 class="font-medium text-2xl">{{ title }}</h2>
+
+      <button (click)="logout()" aplzButton aplzAppearance="basic" size="md" class="items-center">
+        <span class="lowercase font-light"> Cerrar sesión </span>
+      </button>
+    </nav>
+  </aplz-ui-dash-header>
+
+  <aplz-ui-dash-sidebar>
+    <a aplzSidenavLink [routerLink]="[appRoutes.home]"> Inicio </a>
+
+    <a aplzSidenavLink [routerLink]="[appRoutes.historial]"> Historial </a>
+  </aplz-ui-dash-sidebar>
+
+  <section class="w-full min-h-screen pb-36 bg-dark-background">
+    <router-outlet></router-outlet>
+  </section>
+</aplz-ui-dashboard>

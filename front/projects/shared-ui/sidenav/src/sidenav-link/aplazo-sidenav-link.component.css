@@ -1,0 +1,23 @@
+.aplazo-sidenav-link {
+  @apply relative capitalize bg-light flex w-full min-h-[4rem] text-base items-center justify-start pl-5 cursor-pointer;
+}
+
+.aplazo-sidenav-link--no-selection {
+  @apply text-dark-secondary hover:bg-dark-background;
+}
+
+.aplazo-sidenav-link--active {
+  @apply text-dark font-medium bg-dark-background before:absolute before:top-0 before:left-0 before:w-1.5 before:h-full before:bg-aplazo-aplazo before:rounded-tr-lg before:rounded-br-lg;
+}
+
+.aplazo-sidenav-link__label {
+  @apply ml-5 max-w-[24ch] pr-5;
+}
+
+.aplazo-sidenav-link__label-pretty {
+  text-wrap: pretty;
+}
+
+.aplazo-sidenav-link__icon--empty {
+  @apply w-8 h-8;
+}

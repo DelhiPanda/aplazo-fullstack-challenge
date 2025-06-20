@@ -1,0 +1,60 @@
+.aplazo-dash__nav {
+  @apply bg-light border-b border-dark-background fixed left-0 right-0 top-0 z-50 flex flex-col;
+}
+.aplazo-dash__nav:is(.with-banner) {
+  @apply h-44;
+}
+.aplazo-dash__nav:not(.with-banner) {
+  @apply h-24;
+}
+.aplazo-dash__nav-content {
+  @apply flex items-center h-full px-4 flex-[1];
+}
+.aplazo-dash__nav-banner {
+  @apply relative line-clamp-3 my-auto bg-aplazo-aplazo px-12 text-md;
+}
+.aplazo-dash__nav-banner-hidden {
+  @apply hidden;
+}
+.aplazo-dash__nav-banner--container {
+  @apply relative flex items-center;
+}
+.aplazo-dash__nav-banner--container:is(.with-banner) {
+  @apply py-3 bg-aplazo-aplazo;
+}
+.aplazo-dash__nav-banner--container button {
+  @apply absolute right-2 top-1/2 -translate-y-1/2;
+}
+.aplazo-dash__toggle-sidebar {
+  @apply lg:hidden;
+}
+.aplazo-dash__logo-container {
+  @apply flex items-center w-fit lg:w-64;
+}
+.aplazo-dash__logo {
+  @apply hidden lg:inline-block;
+}
+.aplazo-dash__sidebar {
+  @apply fixed left-0 z-40 w-64 h-dvh min-h-fit overflow-y-auto my-auto pt-24 transition-transform bg-light border-r border-dark-background lg:translate-x-0;
+}
+.aplazo-dash__sidebar:is(.with-banner) {
+  @apply top-20;
+}
+.aplazo-dash__sidebar:not(.with-banner) {
+  @apply top-0;
+}
+.aplazo-dash__sidebar--hidden {
+  @apply -translate-x-full;
+}
+.aplazo-dash__main {
+  @apply lg:ml-64 h-auto;
+}
+.aplazo-dash__main:is(.with-banner) {
+  @apply pt-44;
+}
+.aplazo-dash__main:not(.with-banner) {
+  @apply pt-24;
+}
+.aplazo-dash__backdrop {
+  @apply bg-dark bg-opacity-50 fixed inset-0 z-30;
+}

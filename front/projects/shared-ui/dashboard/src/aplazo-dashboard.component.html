@@ -1,0 +1,41 @@
+<div class="antialiased aplazo-dash">
+  <nav class="aplazo-dash__nav">
+    <div class="aplazo-dash__nav-content">
+      <div class="aplazo-dash__logo-container">
+        <div class="aplazo-dash__toggle-sidebar">
+          <button
+            aplzButton
+            size="xs"
+            aplzAppearance="basic"
+            aria-controls="drawer-navigation"
+            aplzClickOutside
+            (clickOutside)="clickOutside()"
+            (click)="toggleSidebarForMobile()"
+          >
+            <!-- <aplz-ui-icon name="menu-1" size="sm"></aplz-ui-icon> -->
+          </button>
+        </div>
+
+        <div class="aplazo-dash__logo">
+          <button aplzButton aplzAppearance="basic" (click)="logoClick.emit()">
+            <aplz-ui-logo></aplz-ui-logo>
+          </button>
+        </div>
+      </div>
+
+      <ng-content select="aplz-ui-dash-header"></ng-content>
+    </div>
+  </nav>
+
+  <aside [class]="sidebarClassnames$ | async" aria-label="Sidebar">
+    <ng-content select="aplz-ui-dash-sidebar"></ng-content>
+  </aside>
+
+  <main class="aplazo-dash__main">
+    <ng-content></ng-content>
+  </main>
+</div>
+
+<ng-template #aplzUiBackdrop>
+  <div class="aplazo-dash__backdrop" (click)="hideSidebar()"></div>
+</ng-template>

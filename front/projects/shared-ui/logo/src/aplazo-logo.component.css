@@ -1,0 +1,21 @@
+.aplazo-logo {
+  @apply w-full max-w-full object-cover object-center;
+}
+.aplazo-logo__container {
+  @apply flex items-center justify-center h-full mx-auto text-center;
+}
+.aplazo-logo__container--sm {
+  @apply w-20;
+}
+.aplazo-logo__container--md {
+  @apply w-32;
+}
+.aplazo-logo__container--base {
+  @apply w-40;
+}
+.aplazo-logo__container--lg {
+  @apply w-48;
+}
+.aplazo-logo__container--xl {
+  @apply w-64;
+}
